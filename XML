@@ -1,0 +1,23 @@
+<proyecto>
+  <nombre>TCondiciones</nombre>
+  <condiciones>
+    <nivel_ruido>
+      <dia>75</dia>
+      <noche>60</noche>
+    </nivel_ruido>
+    <protectores>
+      <protector>cabeza</protector>
+      <protector>auditivos</protector>
+      <protector>vias respiratorias</protector>
+    </protectores>
+  </condiciones>
+</proyecto>
+
+<!ELEMENT proyecto (nombre, condiciones)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT condiciones (nivel_ruido, protectores)>
+<!ELEMENT nivel_ruido (dia, noche)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT noche (#PCDATA)>
+<!ELEMENT protectores (protector*)>
+<!ELEMENT protector (#PCDATA)>
